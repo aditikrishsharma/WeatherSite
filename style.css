@@ -102,3 +102,27 @@ body {
   margin-top: 10px;
   display: none;
 }
+@media (max-width: 480px) {
+  .card {
+    padding: 20px;
+  }
+
+  .search input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+
+  .weather h1 {
+    font-size: 26px;
+  }
+
+  .humidity,
+  .wind {
+    font-size: 18px;
+  }
+
+  .col img {
+    width: 35px;
+    height: 35px;
+  }
+}
