@@ -7,15 +7,22 @@
 }
 
 body {
-  background-color: #222;
+  background-color: #1e1b2e;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card {
   width: 90%;
   max-width: 460px;
-  background: linear-gradient(135deg, #00feba, #5b548a);
-  color: #fff;
-  margin: 100px auto 0;
+  background: linear-gradient(
+    135deg,
+    #a18cd1,
+    #fbc2eb
+  ); /* lavender-pink gradient */
+  color: #1e1b2e;
   border-radius: 20px;
   padding: 40px;
   text-align: center;
@@ -85,4 +92,16 @@ body {
 }
 .humidity,
 .wind {
+  font-size: 28px;
+  margin-top: -6px;
+}
+.weather {
+  display: none;
+}
+.error {
+  text-align: left;
+  margin-left: 10px;
+  font-size: 15px;
+  margin-top: 10px;
+  display: none;
 }
