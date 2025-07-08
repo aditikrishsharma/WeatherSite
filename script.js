@@ -6,8 +6,11 @@ const SearchBtn = document.querySelector(".search button");
 const weatherIcon = document.querySelector(".weathericon");
 
 async function checkWeather(city) {
+  document.getElementById("loading").style.display = "block";
   const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+  document.getElementById("loading").style.display = "none";
   if (response.status === 404) {
+    console.log("City not found"); // 👀 Add this
     document.querySelector(".error").style.display = "block";
     document.querySelector(".weather").style.display = "none";
   } else {
@@ -28,7 +31,7 @@ async function checkWeather(city) {
     } else if (data.weather[0].main == "Rain") {
       weatherIcon.src = "./rain.png";
     } else if (data.weather[0].main == "Mist") {
-      weatherIcon.src = "./mist   .png";
+      weatherIcon.src = "./mist.png";
     }
 
     document.querySelector(".weather").style.display = "block";
